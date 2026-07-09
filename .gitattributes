@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Force binary handling for asset files so git never attempts line-ending
+# normalization on them (which would corrupt PDFs/images on some clones)
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
