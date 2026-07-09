@@ -30,8 +30,8 @@ const Model = {
       label: "Reglamentos",
       featured: true,
       items: [
-        { title: "Reglamento 11", desc: "", file: "" },
-        { title: "Reglamento 15", desc: "", file: "" },
+        { title: "REGLAMENTO 11", desc: "", file: "" },
+        { title: "REGLAMENTO 15", desc: "Reglamento de sumario administrativo de Carabineros de Chile Nº 15", file: "assets/documentos/reglamento-15.pdf" },
       ],
     },
     {
