@@ -55,7 +55,13 @@ const Model = {
     {
       label: "Circulares",
       sortNumeric: true,
-      items: [],
+      items: [
+        {
+          title: "CIRCULAR N° 1.905",
+          desc: "Circular de fecha 24.12.2025 de la Dirección Nacional de Personal de Carabineros, que actualiza las instrucciones sobre el ejercicio de la potestad disciplinaria: cuándo procede sumario, investigación o explicaciones verbales, fijación y registro de domicilio, reglas de notificación, y los recursos, plazos y forma de presentación conforme a los Reglamentos N° 11 y N° 15.",
+          file: "assets/documentos/circular-1905.pdf",
+        },
+      ],
     },
     {
       label: "Instrucciones",
