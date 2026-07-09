@@ -69,7 +69,7 @@ const Controller = {
       () => {                       // mid-wipe: swap screens while covered
         Model.state.screen = screen;
         View.showScreen(screen);
-        if (screen === "projects") this.loadProjects();
+        if (screen === "biblioteca") this.loadLibrary();
         if (screen === "skills") this.loadSkills();
       },
       () => { this.transitioning = false; }
@@ -85,15 +85,10 @@ const Controller = {
   },
 
   /* ---------- Screen data loading ---------- */
-  async loadProjects() {
-    View.renderFeatured(Model.featured);
-    if (Model.state.reposLoaded) return;
-    const { repos, live } = await Model.fetchRepos();
-    const status = live
-      ? `${repos.length} repositories · live from GitHub`
-      : "Showing pinned work · GitHub API unavailable right now";
-    View.renderRepos(repos, status, Model);
-    Model.state.reposLoaded = true;
+  loadLibrary() {
+    if (Model.state.libraryBuilt) return;
+    View.renderLibrary(Model.library);
+    Model.state.libraryBuilt = true;
   },
 
   loadSkills() {

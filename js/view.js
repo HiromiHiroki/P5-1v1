@@ -8,16 +8,14 @@ const View = {
   reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
 
   els: {
-    screens:    {},   // filled in init()
-    menuItems:  [],
-    wipe:       document.getElementById("wipe"),
-    featGrid:   document.getElementById("feat-grid"),
-    repoGrid:   document.getElementById("repo-grid"),
-    repoStatus: document.getElementById("repo-status"),
-    skillsBody: document.getElementById("skills-body"),
-    sfx:        document.getElementById("sfx-select"),
-    cursor:     document.getElementById("cursor"),
-    clock:      document.getElementById("clock"),
+    screens:     {},   // filled in init()
+    menuItems:   [],
+    wipe:        document.getElementById("wipe"),
+    libraryBody: document.getElementById("library-body"),
+    skillsBody:  document.getElementById("skills-body"),
+    sfx:         document.getElementById("sfx-select"),
+    cursor:      document.getElementById("cursor"),
+    clock:       document.getElementById("clock"),
   },
 
   init() {
@@ -95,58 +93,49 @@ const View = {
     } catch {}
   },
 
-  /* ---------- Project cards ---------- */
-  cardThumb(src) {
-    return `<div class="thumb"><img src="${src}" alt="" loading="lazy"
-      onerror="this.closest('.thumb').remove()"></div>`;
-  },
-
+  /* ---------- Document cards ---------- */
   // Split "Medical Image…" so the first word renders red
   splitTitle(title) {
     const first = title.split(" ")[0];
     return `<em>${first}</em>${title.slice(first.length)}`;
   },
 
-  renderFeatured(list) {
-    if (this.els.featGrid.childElementCount) return;
-    list.forEach((f, i) => {
-      const a = document.createElement("a");
-      a.className = "card feat";
-      a.href = f.url; a.target = "_blank"; a.rel = "noopener";
-      a.style.setProperty("--tilt", ((this.hash(f.title) % 5) - 2) * 0.8 + "deg");
-      a.style.setProperty("--d", i * 70 + "ms");
-      a.innerHTML = `
-        ${this.cardThumb(f.img)}
-        <span class="lang" style="--lc:${f.color}">${f.tag}</span>
-        <h3>${f.live ? '<span class="live-dot"></span>' : ""}${this.splitTitle(f.title)}</h3>
-        <p>${f.desc}</p>
-        <div class="meta"><span>${f.live ? "LIVE NOW" : "HIGHLIGHT"}</span><span class="go">${f.cta}</span></div>`;
-      this.els.featGrid.appendChild(a);
-    });
-  },
+  renderLibrary(groups) {
+    if (this.els.libraryBody.childElementCount) return;
+    groups.forEach(g => {
+      const label = document.createElement("div");
+      label.className = "grid-label";
+      label.innerHTML = `<span class="bar"></span>${g.label}`;
+      this.els.libraryBody.appendChild(label);
 
-  renderRepos(repos, statusText, model) {
-    this.els.repoStatus.textContent = statusText;
-    this.els.repoGrid.innerHTML = "";
-    repos.forEach((r, i) => {
-      const a = document.createElement("a");
-      a.className = "card";
-      a.href = r.html_url; a.target = "_blank"; a.rel = "noopener";
-      a.style.setProperty("--tilt", ((this.hash(r.name) % 5) - 2) * 0.8 + "deg");
-      a.style.setProperty("--d", i * 70 + "ms");
-      a.style.setProperty("--lc", model.langColors[r.language] || "#e60012");
-      const pretty = r.name.replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
-      const img = model.projectImages[r.name] || `assets/projects/${r.name}.png`;
-      a.innerHTML = `
-        ${this.cardThumb(img)}
-        <span class="lang">${r.language || "Repo"}</span>
-        <h3>${this.splitTitle(pretty)}</h3>
-        <p>${r.description || "No description yet, but the code speaks for itself."}</p>
-        <div class="meta">
-          <span>★ ${r.stargazers_count || 0}</span>
-          <span class="go">View on GitHub →</span>
-        </div>`;
-      this.els.repoGrid.appendChild(a);
+      if (!g.items.length) {
+        const empty = document.createElement("p");
+        empty.className = "lib-empty";
+        empty.textContent = "Aún no hay documentos en esta categoría.";
+        this.els.libraryBody.appendChild(empty);
+        return;
+      }
+
+      const grid = document.createElement("div");
+      grid.className = "grid";
+      g.items.forEach((it, i) => {
+        const ready = !!it.file;
+        const el = document.createElement(ready ? "a" : "div");
+        el.className = "card" + (g.featured ? " feat" : "") + (ready ? "" : " pending");
+        if (ready) { el.href = it.file; el.target = "_blank"; el.rel = "noopener"; }
+        el.style.setProperty("--tilt", ((this.hash(it.title) % 5) - 2) * 0.8 + "deg");
+        el.style.setProperty("--d", i * 70 + "ms");
+        el.innerHTML = `
+          <span class="lang">${g.label}</span>
+          <h3>${this.splitTitle(it.title)}</h3>
+          <p>${it.desc || "Descripción pendiente."}</p>
+          <div class="meta">
+            <span>${ready ? "DISPONIBLE" : "PRÓXIMAMENTE"}</span>
+            ${ready ? '<span class="go">Ver documento →</span>' : ""}
+          </div>`;
+        grid.appendChild(el);
+      });
+      this.els.libraryBody.appendChild(grid);
     });
   },
 

@@ -167,13 +167,13 @@ body[data-screen]:not([data-screen="home"]) #slash{
 }
 .back-hint:hover{background:var(--red);color:var(--white);}
 
-/* ---------- PROJECTS ---------- */
-#repo-status{font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2vh;opacity:.85;}
+/* ---------- BIBLIOTECA ---------- */
+#library-note{font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2vh;opacity:.85;}
 .grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
-  gap:26px 34px;padding-top:14px;
+  gap:26px 34px;padding-top:14px;padding-bottom:6vh;
 }
-#repo-grid{padding-bottom:6vh;}
+.lib-empty{font-size:14.5px;letter-spacing:.05em;opacity:.75;padding-bottom:4vh;}
 .card{
   color:var(--ink);position:relative;
   padding:20px 22px 18px;cursor:pointer;text-decoration:none;display:block;
@@ -227,16 +227,8 @@ body[data-screen]:not([data-screen="home"]) #slash{
 .card.feat .lang{background:var(--red);}
 .card.feat .meta .go{background:var(--white);color:var(--black);}
 .card.feat:hover .meta .go{background:var(--red);color:var(--white);}
-#feat-grid,.grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
-  gap:26px 34px;padding-top:14px;
-}
-#repo-grid{padding-top:14px;}
-.live-dot{
-  display:inline-block;width:9px;height:9px;border-radius:50%;
-  background:#3dff6e;margin-right:7px;animation:liveBlink 1.1s ease-in-out infinite;
-}
-@keyframes liveBlink{0%,100%{opacity:1;}50%{opacity:.25;}}
+.card.pending{cursor:default;filter:drop-shadow(7px 7px 0 rgba(0,0,0,.3));opacity:.7;}
+.card.pending:hover{transform:rotate(var(--tilt)) !important;filter:drop-shadow(7px 7px 0 rgba(0,0,0,.3));}
 .grid-label{
   font-family:'Archivo Black','Arial Black',Impact,sans-serif;
   font-size:clamp(15px,1.7vw,20px);text-transform:uppercase;letter-spacing:.12em;
@@ -402,17 +394,17 @@ body[data-screen]:not([data-screen="home"]) #hero-art{
   opacity:0;will-change:transform;pointer-events:none;
   transition:opacity .55s ease;
 }
-body[data-screen="home"]     #art-home,
-body[data-screen="projects"] #art-projects,
-body[data-screen="skills"]   #art-skills,
-body[data-screen="about"]    #art-about,
-body[data-screen="contact"]  #art-contact{opacity:1;}
+body[data-screen="home"]       #art-home,
+body[data-screen="biblioteca"] #art-biblioteca,
+body[data-screen="skills"]     #art-skills,
+body[data-screen="about"]      #art-about,
+body[data-screen="contact"]    #art-contact{opacity:1;}
 
 /* the home artwork carries its own black diagonal — drop the CSS slash */
 body.has-art-home #slash{display:none;}
 /* soften the halftone overlay whenever a screen's art is showing */
 body.has-art-home[data-screen="home"] #bg-halftone,
-body.has-art-projects[data-screen="projects"] #bg-halftone,
+body.has-art-biblioteca[data-screen="biblioteca"] #bg-halftone,
 body.has-art-skills[data-screen="skills"] #bg-halftone,
 body.has-art-about[data-screen="about"] #bg-halftone,
 body.has-art-contact[data-screen="contact"] #bg-halftone{opacity:.5;}
@@ -517,11 +509,7 @@ body.has-art-home #big-name .ch:not(.box):not(.boxw){
 @media (max-width:700px){
   .skill-row .name{width:130px;font-size:14px;}
   #hud-bottom{font-size:11px;gap:12px;flex-wrap:wrap;}
-  .grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));
-  gap:26px 34px;padding-top:14px;
-}
-#repo-grid{grid-template-columns:1fr;}
+  .grid{grid-template-columns:1fr;}
   .cursor-mark{right:-34px;}
 }
 @media (prefers-reduced-motion:reduce){

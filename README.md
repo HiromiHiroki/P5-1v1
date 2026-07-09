@@ -9,20 +9,18 @@ A Persona 5 menu-inspired portfolio, structured as Model–View–Controller.
 ├── css/
 │   └── style.css         All styling (theme colors in :root at the top)
 ├── js/
-│   ├── model.js          DATA — projects, skills, GitHub fetch, app state
+│   ├── model.js          DATA — document library (Biblioteca), skills, app state
 │   ├── view.js           DOM — rendering, ransom lettering, wipe, cursor, sound
 │   └── controller.js     EVENTS — keyboard/mouse input, navigation logic
 └── assets/
     ├── sfx/select.mp3    Menu sound (plays on select/confirm)
     ├── cursors/          Animated cursor sprite strips (30 frames each)
     ├── menus/            per-screen backgrounds: home.jpg, skills.jpg, about.jpg,
-    │                     contact.jpg (included) — add projects.jpg to complete the set
+    │                     contact.jpg (included) — add biblioteca.jpg to complete the set
     ├── cv/               your downloadable CV (linked from About + Contact)
     ├── hero.png          ← optional: extra art layered on the home screen
     ├── me.jpg            ← add: your photo for the About polaroid
-    └── projects/         ← add: card thumbnails
-        ├── bsl.png, medcnn.png, gesture.png, rapidcheck.png   (featured)
-        └── <RepoName>.png  (auto-matched to GitHub repos by exact name)
+    └── documentos/       ← add: your PDF files, referenced from model.js `library`
 ```
 
 Missing images hide themselves — no broken icons.
@@ -30,7 +28,10 @@ Missing images hide themselves — no broken icons.
 ## Editing content
 
 Everything you'd normally want to change lives in **js/model.js**:
-featured projects, skill bars, thumbnail overrides, your GitHub username.
+the Biblioteca's document groups (Leyes, Reglamentos, Circulares,
+Instrucciones, Documentos varios) and skill bars. Each document item takes
+a `title`, an optional `desc`, and a `file` path under `assets/documentos/`
+— leave `file` empty and the card shows "Próximamente" instead of a link.
 Bio and contact links are plain HTML in **index.html**.
 Colors are CSS variables at the top of **css/style.css**.
 
@@ -40,7 +41,7 @@ Colors are CSS variables at the top of **css/style.css**.
 python3 -m http.server
 ```
 then open http://localhost:8000 — opening index.html directly (file://)
-blocks the audio fetch and GitHub API in most browsers.
+blocks the audio fetch in most browsers.
 
 ## Deploy
 
