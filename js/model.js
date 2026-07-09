@@ -40,7 +40,13 @@ const Model = {
     },
     {
       label: "Instrucciones",
-      items: [],
+      items: [
+        {
+          title: "Instructivo Dijuscar N° 1 (análisis artículo 86° Reglamento N° 15)",
+          desc: "Instructivo de la Dirección de Justicia de Carabineros que analiza la jurisprudencia de la Contraloría General de la República sobre el artículo 86° del Reglamento de Sumarios N° 15, e instruye que la baja por conducta mala con efectos inmediatos y la resolución del sumario corresponden al mando directo del funcionario involucrado, no al mando territorial del lugar del hecho.",
+          file: "assets/documentos/instructivo-dijuscar-1.pdf",
+        },
+      ],
     },
     {
       label: "Documentos varios",
