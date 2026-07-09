@@ -57,6 +57,11 @@ const Model = {
       sortNumeric: true,
       items: [
         {
+          title: "CIRCULAR N° 1.849",
+          desc: "Circular de fecha 29.05.2020 de la Dirección General de Carabineros, que imparte instrucciones sobre el proceso reglamentario para tramitar peticiones y/o reclamos del personal: obliga a las Jefaturas a dar respuesta oportuna, informada y fundamentada a sus subalternos a través del conducto regular, considerando falta a la disciplina el incumplimiento de esta obligación.",
+          file: "assets/documentos/circular-1849.pdf",
+        },
+        {
           title: "CIRCULAR N° 1.905",
           desc: "Circular de fecha 24.12.2025 de la Dirección Nacional de Personal de Carabineros, que actualiza las instrucciones sobre el ejercicio de la potestad disciplinaria: cuándo procede sumario, investigación o explicaciones verbales, fijación y registro de domicilio, reglas de notificación, y los recursos, plazos y forma de presentación conforme a los Reglamentos N° 11 y N° 15.",
           file: "assets/documentos/circular-1905.pdf",
