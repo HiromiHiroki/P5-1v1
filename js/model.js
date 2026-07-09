@@ -6,7 +6,7 @@
 const Model = {
 
   // Where the contact form delivers (via formsubmit.co relay)
-  contactEmail: "mez.rahman777@gmail.com",
+  contactEmail: "esegueldelafuente@gmail.com",
 
   // App state (read/written by the Controller, displayed by the View)
   state: {
