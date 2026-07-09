@@ -75,7 +75,13 @@ const Model = {
     },
     {
       label: "Documentos varios",
-      items: [],
+      items: [
+        {
+          title: "Recopilación de materias administrativas más recurrentes, relacionadas con la tramitación de Reclamos",
+          desc: "Documento de fecha 31.12.2024, elaborado por el Depto. Reclamos y Sugerencias de la Contraloría General de Carabineros.",
+          file: "assets/documentos/recopilado-materias-reclamos.pdf",
+        },
+      ],
     },
   ],
 
