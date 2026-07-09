@@ -13,6 +13,7 @@ const Controller = {
     this.bindKeyboard();
     this.bindAudioUnlock();
     this.bindContactForm();
+    this.bindAnimePager();
   },
 
   /* ---------- Contact form (relayed via formsubmit.co, mailto fallback) ---------- */
@@ -70,7 +71,7 @@ const Controller = {
         Model.state.screen = screen;
         View.showScreen(screen);
         if (screen === "biblioteca") this.loadLibrary();
-        if (screen === "skills") this.loadSkills();
+        if (screen === "skills") this.loadTopAnime();
       },
       () => { this.transitioning = false; }
     );
@@ -91,12 +92,23 @@ const Controller = {
     Model.state.libraryBuilt = true;
   },
 
-  loadSkills() {
-    if (!Model.state.skillsBuilt) {
-      View.renderSkills(Model.skills);
-      Model.state.skillsBuilt = true;
-    }
+  loadTopAnime() {
+    View.renderTopAnime(Model.animeList, Model.state.animePage, Model.animePageSize);
     View.animateSkillBars();
+  },
+
+  changeAnimePage(delta) {
+    const totalPages = Math.ceil(Model.animeList.length / Model.animePageSize);
+    const next = Model.state.animePage + delta;
+    if (next < 0 || next >= totalPages) return;
+    Model.state.animePage = next;
+    this.play();
+    this.loadTopAnime();
+  },
+
+  bindAnimePager() {
+    document.getElementById("anime-prev").addEventListener("click", () => this.changeAnimePage(-1));
+    document.getElementById("anime-next").addEventListener("click", () => this.changeAnimePage(1));
   },
 
   /* ---------- Sound (browsers block audio until first user gesture) ---------- */

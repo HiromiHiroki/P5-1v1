@@ -72,7 +72,7 @@
           <span class="ransom" data-ransom="BIBLIOTECA"></span><span class="cursor-mark">◀</span>
         </button>
         <button class="menu-item" data-target="skills">
-          <span class="ransom" data-ransom="SKILLS"></span><span class="cursor-mark">◀</span>
+          <span class="ransom" data-ransom="TOP"></span> <span class="ransom" data-ransom="ANIME"></span><span class="cursor-mark">◀</span>
         </button>
         <button class="menu-item" data-target="about">
           <span class="ransom" data-ransom="SOBRE"></span> <span class="ransom" data-ransom="MÍ"></span><span class="cursor-mark">◀</span>
@@ -91,11 +91,16 @@
       <div id="library-body"></div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="screen sub" id="screen-skills" aria-label="Skills">
-      <div class="screen-head"><span class="ransom" data-ransom="SKILLS"></span></div>
+    <!-- TOP ANIME -->
+    <section class="screen sub" id="screen-skills" aria-label="Top Anime">
+      <div class="screen-head"><span class="ransom" data-ransom="TOP"></span> <span class="ransom" data-ransom="ANIME"></span></div>
       <button class="back-hint" data-back>ESC · Back</button>
       <div id="skills-body"></div>
+      <div id="anime-pager">
+        <button id="anime-prev" class="back-hint">◀ Anterior</button>
+        <span id="anime-page-label"></span>
+        <button id="anime-next" class="back-hint">Siguiente ▶</button>
+      </div>
     </section>
 
     <!-- SOBRE MÍ -->
@@ -177,8 +182,8 @@
 
 <!-- MVC: model = data, view = DOM, controller = events -->
 <!-- ?v= is bumped on every deploy so browsers don't serve a cached copy -->
-<script src="js/model.js?v=11" defer></script>
-<script src="js/view.js?v=11" defer></script>
-<script src="js/controller.js?v=11" defer></script>
+<script src="js/model.js?v=12" defer></script>
+<script src="js/view.js?v=12" defer></script>
+<script src="js/controller.js?v=12" defer></script>
 </body>
 </html>

@@ -168,6 +168,14 @@ body[data-screen]:not([data-screen="home"]) #slash{
   cursor:pointer;border:0;font-weight:700;font-family:inherit;
 }
 .back-hint:hover{background:var(--red);color:var(--white);}
+.back-hint:disabled{opacity:.35;cursor:default;}
+.back-hint:disabled:hover{background:var(--white);color:var(--black);}
+
+#anime-pager{
+  display:flex;align-items:center;gap:16px;margin-top:3vh;
+  font-size:14px;letter-spacing:.1em;text-transform:uppercase;
+}
+#anime-pager .back-hint{margin-left:0;}
 
 /* ---------- BIBLIOTECA ---------- */
 #library-note{font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:2vh;opacity:.85;}

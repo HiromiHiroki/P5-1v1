@@ -13,6 +13,9 @@ const View = {
     wipe:        document.getElementById("wipe"),
     libraryBody: document.getElementById("library-body"),
     skillsBody:  document.getElementById("skills-body"),
+    animePage:   document.getElementById("anime-page-label"),
+    animePrev:   document.getElementById("anime-prev"),
+    animeNext:   document.getElementById("anime-next"),
     sfx:         document.getElementById("sfx-select"),
     cursor:      document.getElementById("cursor"),
     clock:       document.getElementById("clock"),
@@ -150,23 +153,35 @@ const View = {
     });
   },
 
-  /* ---------- Skills ---------- */
-  renderSkills(groups) {
-    groups.forEach(g => {
-      const div = document.createElement("div");
-      div.className = "skill-group";
-      div.innerHTML = `<h3>${g.group}</h3>`;
-      g.items.forEach(([name, value]) => {
-        const row = document.createElement("div");
-        row.className = "skill-row";
-        row.innerHTML = `
-          <span class="name">${name}</span>
-          <div class="skill-bar"><div class="fill" data-v="${value}"></div></div>
-          <span class="lv">${value}</span>`;
-        div.appendChild(row);
-      });
-      this.els.skillsBody.appendChild(div);
+  /* ---------- Top Anime ---------- */
+  escapeHtml(str) {
+    const div = document.createElement("div");
+    div.textContent = str;
+    return div.innerHTML;
+  },
+
+  renderTopAnime(list, page, pageSize) {
+    const totalPages = Math.ceil(list.length / pageSize);
+    const start = page * pageSize;
+    const pageItems = list.slice(start, start + pageSize);
+
+    this.els.skillsBody.innerHTML = "";
+    const div = document.createElement("div");
+    div.className = "skill-group";
+    pageItems.forEach(({ title, score }) => {
+      const row = document.createElement("div");
+      row.className = "skill-row";
+      row.innerHTML = `
+        <span class="name">${this.escapeHtml(title)}</span>
+        <div class="skill-bar"><div class="fill" data-v="${score * 10}"></div></div>
+        <span class="lv">${score}</span>`;
+      div.appendChild(row);
     });
+    this.els.skillsBody.appendChild(div);
+
+    this.els.animePage.textContent = `Página ${page + 1} de ${totalPages}`;
+    this.els.animePrev.disabled = page <= 0;
+    this.els.animeNext.disabled = page >= totalPages - 1;
   },
 
   animateSkillBars() {
