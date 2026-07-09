@@ -24,6 +24,7 @@ const Model = {
   library: [
     {
       label: "Leyes",
+      sortNumeric: true,
       items: [
         {
           title: "LEY N° 18.961",
@@ -42,6 +43,7 @@ const Model = {
     },
     {
       label: "Órdenes generales",
+      sortNumeric: true,
       items: [
         {
           title: "ORDEN GENERAL N° 2.554",
@@ -52,6 +54,7 @@ const Model = {
     },
     {
       label: "Circulares",
+      sortNumeric: true,
       items: [],
     },
     {

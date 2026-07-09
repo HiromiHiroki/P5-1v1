@@ -100,6 +100,13 @@ const View = {
     return `<em>${first}</em>${title.slice(first.length)}`;
   },
 
+  // Pulls the first number out of a title ("LEY N° 18.961" -> 18961) so
+  // numbered groups can sort low-to-high regardless of upload order.
+  orderNumber(title) {
+    const match = title.match(/\d[\d.]*/);
+    return match ? parseInt(match[0].replace(/\./g, ""), 10) : Infinity;
+  },
+
   renderLibrary(groups) {
     if (this.els.libraryBody.childElementCount) return;
     groups.forEach(g => {
@@ -116,9 +123,13 @@ const View = {
         return;
       }
 
+      const items = g.sortNumeric
+        ? [...g.items].sort((a, b) => this.orderNumber(a.title) - this.orderNumber(b.title))
+        : g.items;
+
       const grid = document.createElement("div");
       grid.className = "grid";
-      g.items.forEach((it, i) => {
+      items.forEach((it, i) => {
         const ready = !!it.file;
         const el = document.createElement(ready ? "a" : "div");
         el.className = "card" + (g.featured ? " feat" : "") + (ready ? "" : " pending");
