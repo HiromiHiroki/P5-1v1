@@ -134,6 +134,8 @@ body[data-screen]:not([data-screen="home"]) #slash{
 
 /* ---------- RANSOM LETTERS ---------- */
 .ransom{display:inline-block;white-space:nowrap;}
+/* extra breathing room between two ransom spans used as separate words on one line */
+.ransom + .ransom{margin-left:.3em;}
 .ransom .ch{
   display:inline-block;line-height:1;padding:0 .01em;
   transition:transform .15s;
