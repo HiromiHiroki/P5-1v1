@@ -24,7 +24,13 @@ const Model = {
   library: [
     {
       label: "Leyes",
-      items: [],
+      items: [
+        {
+          title: "LEY N° 18.961",
+          desc: "Ley N° 18.961, Ley Orgánica Constitucional de Carabineros de Chile.",
+          file: "assets/documentos/ley-18961.pdf",
+        },
+      ],
     },
     {
       label: "Reglamentos",
