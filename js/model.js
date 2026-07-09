@@ -35,6 +35,16 @@ const Model = {
       ],
     },
     {
+      label: "Órdenes generales",
+      items: [
+        {
+          title: "ORDEN GENERAL N° 2.554",
+          desc: "Orden de fecha 05.03.2018 que modifica la Directiva Complementaria del Reglamento de Vehículos N° 20, sobre accidentes de tránsito con vehículos de Carabineros: define a qué autoridad remitir los sumarios según la región y cuándo procede la exoneración de responsabilidad por caso fortuito.",
+          file: "assets/documentos/orden-general-2554.pdf",
+        },
+      ],
+    },
+    {
       label: "Circulares",
       items: [],
     },
