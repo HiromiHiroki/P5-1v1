@@ -50,8 +50,17 @@ Render top to bottom in this order:
 - **Órdenes generales** — `sortNumeric: true`
 - **Circulares** — `sortNumeric: true`
 - **Instrucciones** — manual insertion order
+- **DOE** — manual insertion order (Documento Electrónico Ordinario —
+  internal decisions/instructions, identified by N.C.U. number)
 - **Documentos varios** — manual insertion order, catch-all for anything
   that doesn't fit the other categories
+
+An item can set `encrypted: true` to show "ENCRIPTADO" instead of
+"DISPONIBLE" in its card (still a working link — used for source PDFs
+that are password-protected). If the user gives you a password to open
+one for reading/summarizing, that's for your use only — do not put the
+password in the description or anywhere else on the public site unless
+the user explicitly asks you to publish it.
 
 `sortNumeric: true` groups auto-sort ascending by the first number found
 in each item's title (see `View.orderNumber` in js/view.js) — e.g.
