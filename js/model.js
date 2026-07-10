@@ -37,6 +37,11 @@ const Model = {
       label: "Reglamentos",
       featured: true,
       items: [
+        {
+          title: "REGLAMENTO DE FERIADOS, PERMISOS, LICENCIAS Y OTROS BENEFICIOS, Nº 9",
+          desc: "Reglamento que regula los feriados, permisos, licencias médicas, traslados y permutas, viáticos, y pasajes y fletes del personal de Carabineros de Chile. Aprobado por Decreto N° 625 de 1964 del Ministerio del Interior, con su Directiva Complementaria aprobada por Orden General N° 1.389 de 2001.",
+          file: "assets/documentos/reglamento-9.pdf",
+        },
         { title: "REGLAMENTO 11", desc: "Reglamento de disciplina de Carabineros de Chile Nº 11", file: "assets/documentos/reglamento-11.pdf" },
         { title: "REGLAMENTO 15", desc: "Reglamento de sumario administrativo de Carabineros de Chile Nº 15", file: "assets/documentos/reglamento-15.pdf" },
       ],
@@ -90,6 +95,11 @@ const Model = {
           title: "Instructivo Dijuscar N° 3 (suspensión de procedimientos disciplinarios, artículo 84 ter Ley N° 18.961)",
           desc: "Instructivo de la Dirección de Justicia de Carabineros (octubre 2023) sobre la suspensión de los procedimientos disciplinarios regulada en el artículo 84 ter de la Ley N° 18.961, conforme al Dictamen E393403/2023 de la Contraloría: fija los requisitos y la autoridad competente para decretarla, la única excepción que permite seguir el procedimiento (calificación de beneficios por lesiones), y aclara que la baja por conducta mala y el retiro temporal pueden aplicarse igual mientras el sumario está suspendido.",
           file: "assets/documentos/instructivo-dijuscar-3.pdf",
+        },
+        {
+          title: "Instructivo sobre las Normas de Prescripción de la Acción Disciplinaria",
+          desc: "Instructivo (sin número) que fija criterios sobre la prescripción de la acción disciplinaria en Carabineros, a raíz de la jurisprudencia de la Contraloría General de la República (Resolución Exenta N° E11599/2025): determina qué régimen aplica según la fecha de los hechos (Reglamento N° 11, artículo 36 bis o artículo 84 ter de la Ley N° 18.961), los plazos, y las causales de suspensión e interrupción de cada uno.",
+          file: "assets/documentos/instructivo-prescripcion-disciplinaria.pdf",
         },
       ],
     },
