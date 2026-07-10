@@ -66,6 +66,16 @@ const Model = {
           desc: "Circular de fecha 24.12.2025 de la Dirección Nacional de Personal de Carabineros, que actualiza las instrucciones sobre el ejercicio de la potestad disciplinaria: cuándo procede sumario, investigación o explicaciones verbales, fijación y registro de domicilio, reglas de notificación, y los recursos, plazos y forma de presentación conforme a los Reglamentos N° 11 y N° 15.",
           file: "assets/documentos/circular-1905.pdf",
         },
+        {
+          title: "CIRCULAR N° 1.861",
+          desc: "Circular de fecha 20.07.2021 de la Dirección Nacional de Orden y Seguridad de Carabineros, que imparte instrucciones sobre el retiro de vehículos de circulación por infracciones a la Ley de Tránsito N° 18.290: detalla los casos que ameritan el retiro (licencia, permiso de circulación, contaminación, abandono, fuga, etc.), el empadronamiento de aparcaderos y grúas, y prohíbe al personal de Carabineros gestionar directamente con esos servicios fuera de lo instruido.",
+          file: "assets/documentos/circular-1861.pdf",
+        },
+        {
+          title: "CIRCULAR N° 1.878",
+          desc: "Circular de fecha 14.07.2023 de la Dirección General de Carabineros, que actualiza las instrucciones sobre la comparecencia de apoderados en procedimientos administrativos y deroga la Circular N° 1.782 (2015): exige que solo abogados puedan ejercer defensas jurídicas (contestar cargos, recursos, etc.), fija los requisitos y presentación del poder, regula las notificaciones —incluyendo por correo electrónico—, la delegación y revocación del mandato, y aclara qué actuaciones son personalísimas del inculpado.",
+          file: "assets/documentos/circular-1878.pdf",
+        },
       ],
     },
     {
@@ -75,6 +85,11 @@ const Model = {
           title: "Instructivo Dijuscar N° 1 (análisis artículo 86° Reglamento N° 15)",
           desc: "Instructivo de la Dirección de Justicia de Carabineros que analiza la jurisprudencia de la Contraloría General de la República sobre el artículo 86° del Reglamento de Sumarios N° 15, e instruye que la baja por conducta mala con efectos inmediatos y la resolución del sumario corresponden al mando directo del funcionario involucrado, no al mando territorial del lugar del hecho.",
           file: "assets/documentos/instructivo-dijuscar-1.pdf",
+        },
+        {
+          title: "Instructivo Dijuscar N° 3 (suspensión de procedimientos disciplinarios, artículo 84 ter Ley N° 18.961)",
+          desc: "Instructivo de la Dirección de Justicia de Carabineros (octubre 2023) sobre la suspensión de los procedimientos disciplinarios regulada en el artículo 84 ter de la Ley N° 18.961, conforme al Dictamen E393403/2023 de la Contraloría: fija los requisitos y la autoridad competente para decretarla, la única excepción que permite seguir el procedimiento (calificación de beneficios por lesiones), y aclara que la baja por conducta mala y el retiro temporal pueden aplicarse igual mientras el sumario está suspendido.",
+          file: "assets/documentos/instructivo-dijuscar-3.pdf",
         },
       ],
     },
