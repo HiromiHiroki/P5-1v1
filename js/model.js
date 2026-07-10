@@ -42,8 +42,16 @@ const Model = {
           desc: "Reglamento que regula los feriados, permisos, licencias médicas, traslados y permutas, viáticos, y pasajes y fletes del personal de Carabineros de Chile. Aprobado por Decreto N° 625 de 1964 del Ministerio del Interior, con su Directiva Complementaria aprobada por Orden General N° 1.389 de 2001.",
           file: "assets/documentos/reglamento-9.pdf",
         },
-        { title: "REGLAMENTO 11", desc: "Reglamento de disciplina de Carabineros de Chile Nº 11, aprobado por Decreto N° 900 de 1967 del Ministerio del Interior.", file: "assets/documentos/reglamento-11.pdf" },
-        { title: "REGLAMENTO 15", desc: "Reglamento de sumarios administrativos de Carabineros de Chile Nº 15, aprobado por Decreto N° 118 de 1982 del Ministerio de Defensa Nacional.", file: "assets/documentos/reglamento-15.pdf" },
+        {
+          title: "REGLAMENTO DE DISCIPLINA DE CARABINEROS DE CHILE, Nº 11",
+          desc: "Reglamento que regula el régimen disciplinario del personal de Carabineros de Chile: las órdenes, el trato entre el personal, los deberes disciplinarios, y las faltas y sanciones. Aprobado por Decreto N° 900 de 1967 del Ministerio del Interior, con modificaciones introducidas por el Decreto Supremo N° 403 de 2000.",
+          file: "assets/documentos/reglamento-11.pdf?v=2",
+        },
+        {
+          title: "REGLAMENTO DE SUMARIOS ADMINISTRATIVOS DE CARABINEROS DE CHILE, Nº 15",
+          desc: "Reglamento que regula la instrucción de los sumarios administrativos en Carabineros de Chile: quiénes pueden ordenarlos, las causales que los originan, y el procedimiento para establecer responsabilidades administrativas. Aprobado por Decreto N° 118 de 1982 del Ministerio de Defensa Nacional.",
+          file: "assets/documentos/reglamento-15.pdf",
+        },
       ],
     },
     {
