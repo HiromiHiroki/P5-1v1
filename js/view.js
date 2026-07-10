@@ -144,7 +144,7 @@ const View = {
           <h3>${this.splitTitle(it.title)}</h3>
           <p>${it.desc || "Descripción pendiente."}</p>
           <div class="meta">
-            <span>${ready ? "DISPONIBLE" : "PRÓXIMAMENTE"}</span>
+            <span>${ready ? (it.encrypted ? "ENCRIPTADO" : "DISPONIBLE") : "PRÓXIMAMENTE"}</span>
             ${ready ? '<span class="go">Ver documento →</span>' : ""}
           </div>`;
         grid.appendChild(el);

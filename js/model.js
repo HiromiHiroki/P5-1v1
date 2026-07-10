@@ -94,6 +94,17 @@ const Model = {
       ],
     },
     {
+      label: "DOE",
+      items: [
+        {
+          title: "DOE N.C.U. 135948828",
+          desc: "Documento Electrónico Ordinario (DOE) — este tipo de documentos suele contener decisiones o instrucciones internas. Este, de fecha 12.05.2021, complementa las instrucciones sobre convenios entre Carabineros de Chile y entidades públicas o privadas: fija quién debe firmarlos según el nivel de la autoridad, qué antecedentes deben acompañarse (informe jurídico, certificado técnico) y las reglas especiales para convenios con Gobiernos Regionales.",
+          file: "assets/documentos/doe-135948828.pdf",
+          encrypted: true,
+        },
+      ],
+    },
+    {
       label: "Documentos varios",
       items: [
         {
