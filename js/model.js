@@ -86,6 +86,11 @@ const Model = {
           desc: "Documento de fecha 31.12.2024, elaborado por el Depto. Reclamos y Sugerencias de la Contraloría General de Carabineros.",
           file: "assets/documentos/recopilado-materias-reclamos.pdf",
         },
+        {
+          title: "Protocolo Grúas Particulares",
+          desc: "Protocolo que regula el requerimiento de servicios de grúa particular para el retiro de vehículos desde la vía pública: prioriza el servicio del propio afectado o su seguro, exige empadronamiento y acreditación legal de las empresas de grúa cuando no lo hay, detalla el contenido mínimo del acta de recepción del vehículo, y prohíbe al personal de Carabineros recibir dineros, aportes o pactar acuerdos con empresas de grúas.",
+          file: "assets/documentos/protocolo-gruas.pdf",
+        },
       ],
     },
   ],
