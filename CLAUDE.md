@@ -41,6 +41,18 @@ then fast-forward-merge into `main` once verified.
    fast-forward merge into `main` and push `main` too — the live site
    only updates from `main`.
 
+## Replacing an existing document's PDF (same filename)
+
+Browsers cache PDF files at their URL just like they cache the JS
+files — swapping the bytes at `assets/documentos/xxx.pdf` without
+changing anything else can leave visitors seeing the old file
+indefinitely. Append/bump a `?v=N` query on that specific item's
+`file` path in model.js (e.g. `"assets/documentos/xxx.pdf?v=2"`) any
+time the underlying PDF changes but the filename doesn't — this
+already happened once (DOE N.C.U. 135948828 replaced with a properly
+password-protected version, but the old unprotected copy kept being
+served until the query bump).
+
 ## Document groups (in `Model.library`, js/model.js)
 
 Render top to bottom in this order:
