@@ -8,3 +8,6 @@
 *.jpg binary
 *.jpeg binary
 *.mp3 binary
+*.pptx binary
+*.docx binary
+*.xlsx binary

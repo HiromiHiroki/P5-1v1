@@ -135,6 +135,11 @@ const Model = {
           desc: "Protocolo que regula el requerimiento de servicios de grúa particular para el retiro de vehículos desde la vía pública: prioriza el servicio del propio afectado o su seguro, exige empadronamiento y acreditación legal de las empresas de grúa cuando no lo hay, detalla el contenido mínimo del acta de recepción del vehículo, y prohíbe al personal de Carabineros recibir dineros, aportes o pactar acuerdos con empresas de grúas.",
           file: "assets/documentos/protocolo-gruas.pdf",
         },
+        {
+          title: "Acerca de las Notificaciones en el Proceso Administrativo",
+          desc: "Presentación (PPT) sobre las notificaciones dentro del proceso administrativo de Carabineros: su regulación en cada etapa (cargos, dictamen, recursos, sumarios, investigaciones, primeras diligencias), los tres tipos de notificación —personal, por carta certificada y tácita, conforme a los Reglamentos N° 15 y N° 11 y la Ley N° 19.880—, análisis práctico con jurisprudencia de la Contraloría, y las dudas más recurrentes sobre plazos y validez.",
+          file: "assets/documentos/notificaciones.pptx",
+        },
       ],
     },
     {
