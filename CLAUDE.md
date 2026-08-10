@@ -66,6 +66,9 @@ Render top to bottom in this order:
   internal decisions/instructions, identified by N.C.U. number)
 - **Documentos varios** — manual insertion order, catch-all for anything
   that doesn't fit the other categories
+- **Jurisprudencia** — manual insertion order, last group. Court rulings;
+  title is just the rol (e.g. `"ROL N° 4603-2026"`), no "sentencia" or
+  court name prefix.
 
 An item can set `encrypted: true` to show "ENCRIPTADO" instead of
 "DISPONIBLE" in its card (still a working link — used for source PDFs
