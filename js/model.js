@@ -137,6 +137,16 @@ const Model = {
         },
       ],
     },
+    {
+      label: "Jurisprudencia",
+      items: [
+        {
+          title: "ROL N° 4603-2026",
+          desc: "Sentencia de la Corte de Apelaciones de Valparaíso (31.07.2026) que rechaza el recurso de protección de un ex funcionario dado de baja por conducta mala tras un sumario administrativo de más de siete años. La Corte no entra al fondo (dilación, incompetencia, decaimiento del sumario): como el propio recurrente tenía pendiente un Recurso Extraordinario de Revisión en sede administrativa, el artículo 54 de la Ley N° 19.880 le impide tramitar la misma pretensión en ambas vías a la vez.",
+          file: "assets/documentos/rol-4603-2026.pdf",
+        },
+      ],
+    },
   ],
 
   // ---- Top Anime screen ----
