@@ -94,6 +94,11 @@ const Model = {
           desc: "Circular de fecha 14.07.2023 de la Dirección General de Carabineros, que actualiza las instrucciones sobre la comparecencia de apoderados en procedimientos administrativos y deroga la Circular N° 1.782 (2015): exige que solo abogados puedan ejercer defensas jurídicas (contestar cargos, recursos, etc.), fija los requisitos y presentación del poder, regula las notificaciones —incluyendo por correo electrónico—, la delegación y revocación del mandato, y aclara qué actuaciones son personalísimas del inculpado.",
           file: "assets/documentos/circular-1878.pdf",
         },
+        {
+          title: "CIRCULAR N° 1.886",
+          desc: "Circular de fecha 31.07.2024 de la Dirección General de Carabineros, que actualiza las instrucciones institucionales sobre acoso sexual, acoso laboral y violencia en el trabajo conforme a la Ley N° 21.643 (Ley Karin): define estos conceptos y sus elementos, fija los principios que rigen la investigación (confidencialidad, imparcialidad, celeridad, debido proceso, presunción de inocencia, entre otros), y regula el procedimiento de denuncia, investigación y sanción de este tipo de conductas.",
+          file: "assets/documentos/circular-1886.pdf",
+        },
       ],
     },
     {
