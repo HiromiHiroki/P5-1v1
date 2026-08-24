@@ -62,8 +62,6 @@ Render top to bottom in this order:
 - **Órdenes generales** — `sortNumeric: true`
 - **Circulares** — `sortNumeric: true`
 - **Instrucciones** — manual insertion order
-- **DOE** — manual insertion order (Documento Electrónico Ordinario —
-  internal decisions/instructions, identified by N.C.U. number)
 - **Documentos varios** — manual insertion order, catch-all for anything
   that doesn't fit the other categories
 - **Jurisprudencia** — manual insertion order, last group. Court rulings;
